@@ -6,10 +6,10 @@ This is a simple Sinatra app that will score your cards for you.
 Running
 -------
 
-# Clone the Git repository
-# bundle install
-# ruby app.rb
-# Go to http://localhost:4567 in your browser
+* Clone the Git repository
+* bundle install
+* ruby app.rb
+* Go to http://localhost:4567 in your browser
 
 Tests
 -----
