@@ -1,0 +1,26 @@
+%html
+  %head
+    %title Score your cards
+  %body
+    %h1 Your Score
+    %h2 Your occupation: #{@player.occupation}
+    %table
+      %tr
+        %td Resource Score: 
+        %td#resource_score #{@player.resource_score}
+      %tr 
+        %td Modified Land Values: 
+        %td#land_score #{@player.land_score}
+      %tr 
+        %td Tools: 
+        %td#tool_score #{@player.tool_score}
+      %tr 
+        %td Beasts of Burden: 
+        %td#beast_score #{@player.beast_score}
+      %tr 
+        %td Bonus Items: 
+        %td#bonus_score #{@player.bonus_score}
+      %tr
+        %td
+          %strong Total: 
+        %td#total_score #{@player.total_score}

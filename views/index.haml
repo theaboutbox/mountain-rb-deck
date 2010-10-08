@@ -1,0 +1,33 @@
+%html
+  %head
+    %title Score your cards
+  %body
+    %h1 Score your cards
+    %p Please enter your cards, one per line
+    %p
+      %em
+        Example:
+        %br
+        Horse 3
+        %br
+        Ore Vein 10
+    %form{:method => :post, :action => '/'}
+      %label{:for => :occupation} Occupation
+      %br
+      %select{:name => :occupation}
+        %option Cowboy
+        %option Trapper
+        %option Homesteader
+        %option Prospector
+      %br
+      %label{:for => :card_list} Card List
+      %br
+      %textarea{:name => :card_list, :rows => 6}
+        horse 4
+        Forest 9
+        Circus 6
+        Whiskey 3
+        Wild Game 3
+        Trap 3
+      %br
+      %input{:type => :submit, :id => :submit}
