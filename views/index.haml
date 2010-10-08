@@ -14,7 +14,7 @@
     %form{:method => :post, :action => '/'}
       %label{:for => :occupation} Occupation
       %br
-      %select{:name => :occupation}
+      %select{:id => :occupation, :name => :occupation}
         %option Cowboy
         %option Trapper
         %option Homesteader
@@ -22,7 +22,7 @@
       %br
       %label{:for => :card_list} Card List
       %br
-      %textarea{:name => :card_list, :rows => 6}
+      %textarea{:id => :card_list, :name => :card_list, :rows => 6}
         horse 4
         Forest 9
         Circus 6
@@ -31,3 +31,9 @@
         Trap 3
       %br
       %input{:type => :submit, :id => :submit}
+    %p 
+      This cheezy application was produced by Cameron Pope for Mountain.rb.
+      %br
+      %a{:href => 'http://github.com/theaboutbox/mountain-rb-deck'} Get the code
+      %br
+      %a{:href => 'http://www.theaboutbox.com/'}Visit my Web Site

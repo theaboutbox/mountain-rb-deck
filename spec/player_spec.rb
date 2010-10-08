@@ -26,7 +26,6 @@ describe Player do
     end
     
     it "Calculates modified land values" do
-      puts @deck.land_cards.inspect
       @player.land_score.should == 1
     end
     
@@ -137,49 +136,49 @@ describe Player do
       @p.beast_score.should == 10
     end
 
-    it "enhances resource values for cattle in mountains" do
+    it "halves resource values for cattle in mountains" do
       @d.add_card 'Cattle 5'
       @d.add_card 'Mountain 5'
       @p.land_score.should == 2
     end
 
-    it "adjusts for cattle in forest" do
+    it "zeros cattle in forest" do
       @d.add_card 'Cattle 5'
       @d.add_card 'Forest 10'
       @p.land_score.should == 0
     end
 
-    it "enhances resource values for ore" do
+    it "halves resource values for ore in forest" do
       @d.add_card 'Ore Vein 3'
       @d.add_card 'Forest 3'
       @p.land_score.should == 1
     end
 
-    it "adjust ore for plains" do
+    it "zeros ore for plains" do
       @d.add_card 'Ore Vein 10'
       @d.add_card 'Plains 1'
       @p.land_score.should == 0
     end
 
-    it "enhances resource values for seeds" do
+    it "halves resource values for seeds" do
       @d.add_card 'Seeds 5'
       @d.add_card 'Forest 3'
       @p.land_score.should == 1
     end
 
-    it "adjusts seeds in mountains" do
+    it "zeros seeds in mountains" do
       @d.add_card 'Seeds 5'
       @d.add_card 'Mountain 3'
       @p.land_score.should == 0
     end
 
-    it "enhances resource values for game" do
+    it "halves value of mountains for game" do
       @d.add_card 'Wild Game 5'
       @d.add_card 'Mountain 2'
       @p.land_score.should == 1
     end
 
-    it "adjusts game scores in plains" do
+    it "zeros value of plains with wild game" do
       @d.add_card 'Wild Game 5'
       @d.add_card 'Plains 10'
       @p.land_score.should == 0

@@ -20,7 +20,6 @@ class App < Sinatra::Base
       d.add_card card.strip
     end
     @player = Player.new('Player',params[:occupation].strip,d)
-    puts @player.inspect
     haml :score
   end
 end
