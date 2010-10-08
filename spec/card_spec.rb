@@ -4,7 +4,7 @@ require 'card'
 describe Card do
   it "has a name and face value" do
     c = Card.new('burro',9)
-    c.name.should == 'burro'
+    c.name.should == 'Burro'
     c.value.should == 9
   end
 

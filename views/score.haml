@@ -2,8 +2,13 @@
   %head
     %title Score your cards
   %body
-    %h1 Your Score
     %h2 Your occupation: #{@player.occupation}
+    %h2 Your Cards
+    %ul
+      - @player.deck.cards.each do |card|
+        %li #{card.name} #{card.value} (#{card.type.to_s})
+
+    %h2 Your Score
     %table
       %tr
         %td Resource Score: 
